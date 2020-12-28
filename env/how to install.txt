@@ -1,0 +1,2 @@
+1. check pyopencl version with oclDeviceQuery
+2. download the specific version from https://link.zhihu.com/?target=https%3A//www.lfd.uci.edu/~gohlke/pythonlibs/%23pyopencl
