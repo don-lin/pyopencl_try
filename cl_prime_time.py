@@ -48,6 +48,8 @@ def isPrime(n):
             return False
     return True
 
+import time
+start=time.time()
 res_g = cl.Buffer(ctx, mf.WRITE_ONLY, a_np.nbytes)
 for i in range(1):
     prg.sum(queue, a_np.shape, None, a_g, b_g, res_g)
@@ -55,8 +57,6 @@ for i in range(1):
 res_np = np.empty_like(a_np)
 cl.enqueue_copy(queue, res_np, res_g)
 
-import time
-start=time.time()
 
 # Check on CPU with Numpy:
 for i in range(len(res_np)):
